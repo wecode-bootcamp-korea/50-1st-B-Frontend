@@ -3,36 +3,35 @@ import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
   const navigate = useNavigate();
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [user, setUser] = useState({
+    email: '',
+    password: '',
+  });
 
-  const saveUserId = e => {
-    setEmail(e.target.value);
-  };
-
-  const saveUserPassword = e => {
-    setPassword(e.target.value);
+  const updateForm = e => {
+    const nextForm = { ...user, [e.target.name]: e.target.value };
+    setUser(nextForm);
   };
 
   const handleLogin = () => {
-    if (isValid()) navigate('/signup');
+    if (!isValid()) navigate('/signup');
   };
 
-  const validLogin = (email, password) => {
-    if (!email.includes('@')) return false;
-    if (password.length < 5) return false;
+  const validLogin = user => {
+    if (!user.email.includes('@')) return false;
+    if (user.password.length < 5) return false;
     return true;
   };
 
   const isValid = () => {
-    return validLogin(email, password);
+    return validLogin(user);
   };
 
   return (
     <div>
       <div>
-        <input placeholder="이메일" onChange={saveUserId}></input>
-        <input placeholder="비밀번호" onChange={saveUserPassword}></input>
+        <input placeholder="이메일" onChange={updateForm}></input>
+        <input placeholder="비밀번호" onChange={updateForm}></input>
       </div>
       <button disabled={!isValid} onClick={handleLogin}>
         로그인
