@@ -1,14 +1,14 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import KimCodeLogin from './pages/KimCode/Login/Login';
-import KimCodeMain from './pages/KimCode/Main/Main';
+import Main from './pages/sihyun/Main/Main';
+import Login from './pages/sihyun/Login/Login';
 
 const Router = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/kimcode-login" element={<KimCodeLogin />} />
-        <Route path="/kimcode-main" element={<KimCodeMain />} />
+        <Route path="/" element={<Main />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
     </BrowserRouter>
   );
