@@ -1,0 +1,80 @@
+.logoImage {
+  width: 100%;
+  height: 555px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 24px;
+  flex: 1 0 0;
+  align-self: stretch;
+}
+
+input::placeholder {
+  padding-left: 16px;
+}
+
+.userInfo {
+  display: flex;
+  gap: 8px;
+  justify-content: space-between;
+  align-self: stretch;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+input {
+  height: 44px;
+  border-radius: 6px;
+  border: 1px solid #e0e0e0;
+}
+
+.buttonLoginActivated {
+  display: flex;
+  height: 56px;
+  background-color: #2d71f7;
+  color: white;
+  border: white;
+  border-radius: 6px;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttonLoginInactivated {
+  display: flex;
+  height: 56px;
+  background-color: #ccc;
+  color: white;
+  border: white;
+  border-radius: 6px;
+  justify-content: center;
+  align-items: center;
+}
+
+.loginOption {
+  margin-top: 24px;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.middleLine {
+  width: 0.5px;
+  height: 24px;
+  border: solid 0.5px gray;
+}
+
+.signIn {
+  margin-right: 24px;
+  min-width: 100px;
+  text-align: center;
+}
+
+.passWordFinder {
+  margin-left: 24px;
+  min-width: 100px;
+  text-align: center;
+}
