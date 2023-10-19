@@ -6,17 +6,20 @@ const Write = () => {
   const [text, setText] = useState('');
 
   const handleWrite = () => {
-    fetch('http://10.58.52.161:8000/threads/addpost', {
+    const token = localStorage.getItem('token');
+    // fetch('http://10.58.52.161:8000/threads/addpost',
+    fetch('http://10.58.52.85:8000/posts', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json;charset=utf-8',
+        token: token,
       },
       body: JSON.stringify({
         content: text,
       }),
-    });
-    setText('');
-    navigate('/thread');
+    })
+      .then(res => res.json())
+      .then(() => navigate('/thread'));
   };
   return (
     <>

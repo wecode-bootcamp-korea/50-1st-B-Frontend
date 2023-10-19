@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 const Modify = () => {
   const [text, setText] = useState('');
-
+  /* 기본적인 개념만 간단하게 적어둔 상황 */
   useEffect(
     fetch('')
       .then(res => res.json())

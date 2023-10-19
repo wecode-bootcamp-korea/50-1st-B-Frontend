@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+// import './Signup.scss';
 
 const Signup = () => {
   const navigate = useNavigate();
@@ -38,7 +39,8 @@ const Signup = () => {
   };
 
   const handleSignup = () => {
-    fetch('http://10.58.52.161:8000/users/signup', {
+    // fetch('http://10.58.52.161:8000/users/signup', {
+    fetch('http://10.58.52.85:8000/signup', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json;charset=utf-8',
@@ -63,47 +65,91 @@ const Signup = () => {
     user.nickname;
 
   return (
-    <>
+    <div className="join">
+      <div className="header">
+        <p>뒤로</p>
+      </div>
       <div className="container">
-        <h3>회원가입</h3>
-        <p>기본 정보</p>
-        <input name="email" placeholder="이메일" onChange={updateForm} />
-        <input
-          name="password"
-          type="password"
-          placeholder="비밀번호"
-          onChange={updateForm}
-        />
-        <input
-          type="password"
-          placeholder="비밀번호 확인"
-          onChange={e => setConfirmPassword(e.target.value)}
-        />
-        <p>닉네임과 프로필 이미지</p>
-        <input name="nickname" placeholder="닉네임" onChange={updateForm} />
-        <p>전화번호</p>
-        <input placeholder="- 없이 숫자만 입력해주세요" />
-        <p>생일</p>
-        <select className="select" name="year">
-          {birthday.year.map(y => {
-            return <option key={y}>{y}년</option>;
-          })}
-        </select>
-        <select className="select" name="month">
-          {birthday.month.map(m => {
-            return <option key={m}>{m}월</option>;
-          })}
-        </select>
-        <select className="select" name="day">
-          {birthday.day.map(d => {
-            return <option key={d}>{d}일</option>;
-          })}
-        </select>
+        <p className="joinTitle">회원가입</p>
+        <div className="basicInfo">
+          <div className="basicLabel">
+            <p className="basicText">기본 정보</p>
+            <p className="basicRequired">필수 사항</p>
+          </div>
+          <div className="basicInput">
+            <input
+              className="inputbox"
+              name="email"
+              placeholder="이메일"
+              onChange={updateForm}
+            />
+            <input
+              className="inputbox"
+              name="password"
+              type="password"
+              placeholder="비밀번호"
+              onChange={updateForm}
+            />
+            <input
+              className="inputbox"
+              type="password"
+              placeholder="비밀번호 확인"
+              onChange={e => setConfirmPassword(e.target.value)}
+            />
+          </div>
+        </div>
+        <div className="nickname">
+          <div className="nickLabel">
+            <p className="nickText">닉네임과 프로필 이미지</p>
+            <p className="nickRequired">선택 사항</p>
+          </div>
+          <input
+            className="inputbox"
+            name="nickname"
+            placeholder="닉네임"
+            onChange={updateForm}
+          />
+        </div>
+        <div className="phone">
+          <div>
+            <p className="phoneText">전화번호</p>
+            <p className="phoneRequired">선택 사항</p>
+          </div>
+          <input
+            className="inputbox"
+            type="number"
+            placeholder="- 없이 숫자만 입력해주세요"
+          />
+        </div>
+
+        <div className="birthday">
+          <div className="birthLabel">
+            <p className="birthdayText">생일</p>
+            <p className="birthdayRequired">선택 사항</p>
+          </div>
+          <div className="birth">
+            <select className="select" name="year">
+              {birthday.year.map(y => {
+                return <option key={y}>{y}년</option>;
+              })}
+            </select>
+            <select className="select" name="month">
+              {birthday.month.map(m => {
+                return <option key={m}>{m}월</option>;
+              })}
+            </select>
+            <select className="select" name="day">
+              {birthday.day.map(d => {
+                return <option key={d}>{d}일</option>;
+              })}
+            </select>
+          </div>
+        </div>
       </div>
       <button className="signupBtn" disabled={!isValid} onClick={handleSignup}>
         회원 가입
       </button>
-    </>
+    </div>
   );
 };
 
