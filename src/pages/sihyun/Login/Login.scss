@@ -1,0 +1,199 @@
+.loginInput {
+  box-sizing: border-box;
+  width: 528px;
+  height: 56px;
+  padding: 10px;
+  /* White */
+  background: #ffffff;
+  /* Grey88 */
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+  /* Body2 */
+  font-family: 'Apple SD Gothic Neo';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  /* identical to box height, or 138% */
+  /* Grey60 */
+  color: #999999;
+}
+
+.container {
+  /* Auto layout */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px 24px;
+  gap: 16px;
+  width: 576px;
+  height: 225px;
+  /* Inside auto layout */
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+.input {
+  /* Auto layout */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0px;
+  gap: 8px;
+  width: 528px;
+  height: 120px;
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+.loginBtn {
+  width: 528px;
+  height: 56px;
+  /* Blue */
+  background: #2d71f7;
+  border-radius: 6px;
+  /* Inside auto layout */
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+  // /* 버튼 */
+  // position: absolute;
+  // width: 47px;
+  // height: 13px;
+  // left: calc(50% - 47px / 2 + 0.5px);
+  // top: calc(50% - 13px / 2 + 0.5px);
+  padding-left: 45%;
+  /* Label */
+  font-family: 'Apple SD Gothic Neo';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 22px;
+  /* leading-trim and text-edge are draft CSS properties.
+  Read more: https://drafts.csswg.org/css-inline-3/#leading-trim
+  */
+  leading-trim: both;
+  text-edge: cap;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  /* White */
+  color: #ffffff;
+}
+
+.loginOpt {
+  /* Auto layout */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  gap: 24px;
+  width: 240px;
+  height: 17px;
+  /* Inside auto layout */
+  flex: none;
+  order: 2;
+  flex-grow: 0;
+}
+
+.optText {
+  width: 96px;
+  height: 17px;
+  /* Caption */
+  font-family: 'Apple SD Gothic Neo';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  /* identical to box height */
+  display: flex;
+  align-items: center;
+  text-align: center;
+  /* Black */
+  color: #000000;
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.optLine {
+  width: 16px;
+  height: 0px;
+  /* Grey88 */
+  border: 1px solid #e0e0e0;
+  transform: rotate(90deg);
+  /* Inside auto layout */
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+/* Logo */
+.logo {
+  width: 118px;
+  height: 143px;
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.wecodeLogo {
+  width: 144px;
+  height: 32px;
+  /* Inside auto layout */
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+.splash {
+  /* Auto layout */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  gap: 24px;
+  width: 576px;
+  height: 555px;
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 1;
+}
+
+/* Login */
+.loginPage {
+  box-sizing: border-box;
+  /* Auto layout */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px 0px 40px;
+  gap: 24px;
+  position: absolute;
+  width: 576px;
+  height: 844px;
+  left: 1496px;
+  top: 184px;
+  /* White */
+  background: #ffffff;
+  border: 1px solid #e6e6e6;
+  border-radius: 16px;
+}
